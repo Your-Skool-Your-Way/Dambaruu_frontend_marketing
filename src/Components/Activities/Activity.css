@@ -1,0 +1,50 @@
+.activity-section {
+  background-image: url(../../Asset/bg3.jpg);
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  overflow: scroll;
+}
+.activity-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 153px;
+}
+
+.alphabet-card {
+  height: 20.1rem;
+  width: 13.4rem;
+  background-image: url(../../Asset/cards/alphabets/1-53.png);
+
+  text-align: center;
+  border-radius: 2rem;
+
+  top: 10rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.number-card {
+  height: 20.1rem;
+  width: 13.4rem;
+  background-image: url(../../Asset/cards/numbers/1-21.png);
+
+  top: 100;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 2rem;
+}
+.alphabet-card:hover {
+  box-shadow: 0 14px 28px #3ea3be, 0 7px 7px #6ccef0;
+}
+.number-card:hover {
+  box-shadow: 0 14px 28px #3ea3be, 0 7px 7px #6ccef0;
+}

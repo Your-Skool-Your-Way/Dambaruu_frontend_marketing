@@ -1,1 +1,1 @@
-# Dambaruu_frontend_marketing
+# Dambaru_SchoolApp_Interns

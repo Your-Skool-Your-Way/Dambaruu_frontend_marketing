@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.container-sidebar {
+  width: 17.5%;
+  height:99.2vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #194792;
+  position: fixed;
+  top: 1px;
+  bottom: 3px;
+  border: 2px solid #ffcb23;
+  box-shadow: inset 0 0 2px #ffcb23;
+  border-radius: 15px;
+  backdrop-filter: blur(25px);
+  outline-offset: 4px;
+}
+
+.scrl{
+  height: 100vh;
+  overflow: auto auto;
+}
+.scrl::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.scrl::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+  outline: 1px solid #a0a0a0;
+}
+.logo-container {
+  display: flex;
+}
+.logo {
+  width: 25%;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+.text-logo {
+  width: 78%;
+  height: 57%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.Activity {
+  height: 3rem;
+  /* margin-left: 10px; */
+}
+.Activity-Button {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: medium;
+  overflow-y: hidden;
+  height: 3rem;
+  width: 13.7rem;
+  background-color: #b9b91a;
+  text-align: center;
+}
+.courses-all {
+  height: 80vh;
+}
+.courses-section {
+  color: orange;
+}
+.courses-section > img {
+  width: 15%;
+}
+.profile {
+  width: 100%;
+  display: flex;
+  /* margin-top: 155%; */
+  bottom: 0;
+
+  justify-content:flex-start;
+  background-color: orange;
+}
+.profile > h2 {
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+.profile > img {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+}
+.Button {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: medium;
+  background-color: #337bf1;
+  text-align: center;
+}
+/* abhisek Adds css */
+.sub-card-sidebar {
+  font-size: 10px;
+  color: white;
+}
+.sidebar_scrol {
+  flex: 2;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  overflow: scroll;
+  line-height: 300px;
+}
+div.sidebar_SubList {
+  /* width: auto;
+  height: 20px;
+  color: white;
+  font-weight: 600px;
+  padding: -8px;
+  margin-bottom: -23px;
+  margin-top: 0;
+  margin-left: 16px;
+  justify-content: center; */
+  padding: 0;
+  margin-top: 0px;
+}
+/* .sidebar_SubLis Button{
+  cursor: url(/public/pointer.png), auto;
+} */
+#demo-simple-select-label {
+  color: white;
+}
+
+@media only screen and (min-width: 1100px) {
+}
+/* Abhisek */
+.drop {
+  background-color: #194792;
+  color: white;
+  padding: 16px;
+  font-size: 10px;
+  border: none;
+  text-decoration: none;
+  padding-top: 5%;
+  font-size: 2rem;
+  color: orange;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  min-width: 160px;
+  border: solid 2px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #cb5b9f;
+  border-radius: 15;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.slogan {
+  text-align: center;
+  color: #fddf2e;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+.subject_list {
+  background-color: white;
+  color: white;
+  border: solid 5px white;
+}
+
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+}
+.Button {
+  font-family: sans-serif !important;
+  font-weight: bolder !important ;
+  font-size: 13.5px !important;
+}
+
+@media screen and (min-width: 1280px) and (min-height: 720px) {
+.Button {
+  font-family: sans-serif !important;
+  font-weight: bolder !important ;
+  font-size: 13.5px !important;
+}
+}
+
+@media screen and (max-width: 3840px) and (max-height: 2160px) {
+}
+.Button {
+  font-family: sans-serif !important;
+  font-weight: bolder !important ;
+  font-size: 13.5px !important;
+}
+
+
+
+/* ----Activity Button media queries---- */
+@media screen and (max-width:1024px) {
+  .Activity{
+    height: 5rem !important;
+
+  }
+  .Activity-Button{
+    height: 3rem;
+    width: 11rem;
+  
+  }
+}
+
+@media screen  and (min-width:1025px) and (max-width:1280px) {
+  .Activity{
+    height: 6rem ;
+  }
+  .Activity-Button{
+    height:3rem ;
+    width: 11.2rem;
+    text-align:center;
+    font-size: 12.5px;
+    margin-left: 1rem;
+
+  }
+}
+@media screen and (min-width:1281px) and (max-width:1366px) {
+  .Activity{
+   height: 3rem;
+  }
+  .Activity-Button{
+    height:3rem ;
+    width: 12.5rem;
+    margin-left:0;
+ 
+  }
+}
+
+
+@media screen and (min-width:1366px) and (max-width:1920px){
+  .Activity{
+
+  }
+  .Activity-Button{
+    height:3rem ;
+    width: 14rem;
+    margin-left: 1.2rem;
+
+  }
+}
+@media screen and (min-width:1921px) and (max-width:2000px){
+  .Activity{
+  height: 5rem;
+  width:19rem;
+  }
+  .Activity-Button{
+    height:3rem ;
+    width: 17.8rem;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width:2001px) and (max-width:2200px){
+  .Activity{
+  height: 5rem;
+  width:19rem;
+  margin-left: 0rem;
+  }
+  .Activity-Button{
+    height:3rem ;
+    width: 18.5rem;
+   margin-left: 0;
+  }
+}
+@media screen and (min-width:3840px) {
+.Activity{
+height: 3rem;
+margin-bottom: 3rem;
+  }
+  .Activity-Button{
+    height:4rem ;
+    width: 35.3rem;
+    margin-left: 3px;
+    font-size: 20px;
+    text-align:center;
+    
+
+  }
+}
