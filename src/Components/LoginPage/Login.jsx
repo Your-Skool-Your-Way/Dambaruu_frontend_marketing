@@ -107,7 +107,6 @@ const Login = () => {
               onSubmit={handleSubmit}
             >
               {({ errors, values, handleChange }) => (
-                
                 <Form id="contact-form" name="contact-form">
                   <input
                     type="text"
@@ -115,7 +114,6 @@ const Login = () => {
                     name="email"
                     value={values.email || ""}
                     onChange={handleChange}
-                    
                   />
                   <br />
                   <span style={{ fontSize: "14px", color: "#B22237" }}>

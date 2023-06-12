@@ -221,10 +221,12 @@ const Video = () => {
               <div className="video-right">
                 {video.map((vi, index) => (
                   <Videoright
-                    key={vi.id} 
+                    key={vi.id}
                     video={vi}
                     isSelected={
-                      video[currentVideoIndex] && video[currentVideoIndex].id === vi.id }
+                      video[currentVideoIndex] &&
+                      video[currentVideoIndex].id === vi.id
+                    }
                     onClick={() => {
                       setCurrentVideoIndex(index);
                     }}

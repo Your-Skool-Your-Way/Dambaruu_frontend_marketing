@@ -6,15 +6,11 @@ import Loader from "../Loader";
 import axios, { config } from "../../utils/api";
 import { apiEndPoint } from "../../utils/constants";
 import Header from "../Header/Header";
-
-
 const Dash = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   console.log(data);
   const history = useHistory();
-
-
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -23,9 +19,10 @@ const Dash = () => {
           setData(res.data.data);
         }
         setLoading(false);
-      });};
+      });
+    };
     fetchData();
-  },[]);
+  }, []);
 
   const redirectSubjectPage = (className) => {
     history.push(`/subjects?class=${className}`);
@@ -45,7 +42,7 @@ const Dash = () => {
           <div className="right-side">
             <Loader />
           </div>
-        ) :(
+        ) : (
           <div className="right-section">
             <Header />
             <div className="standardAll">

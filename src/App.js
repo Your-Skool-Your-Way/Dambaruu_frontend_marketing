@@ -10,12 +10,10 @@ import {
   Activities,
   PrivateRoute,
 } from "./Components";
-import Tracing from "./Components/Tracing/Tracing";
-import Number from "./Components/Number/Number";
 import { appRoute } from "./utils/constants";
 import "bootstrap/dist/css/bootstrap.min.css";
-const { login, dashboard, subject, content, video, activity ,tracing,number} = appRoute;
-//console.log(appRoute);
+const { login, dashboard, subject, content, video, activity } = appRoute;
+console.log(appRoute);
 const App = () => {
   // Disable KeyBoard Shortcut Key for Application
 
@@ -26,9 +24,9 @@ const App = () => {
     }
 
     // disable I key
-    /*if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
       return false;
-    }*/
+    }
 
     // disable J key
     if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
@@ -56,13 +54,10 @@ const App = () => {
         <Switch>
           <Route exact path={login} component={Login} />
           <PrivateRoute exact path={dashboard} component={Dashboard} />
-          <Route path= {activity} component={ Activities}/>
-          <Route path={tracing} component={Tracing} />
-          <Route path={number} component={Number} />
           <Route path={subject} component={SubjectList} />
           <PrivateRoute path={content} component={Content} />
           <PrivateRoute path={video} component={Video} />
-          {/* <PrivateRoute path={activity} component={Activities} /> */}
+          <PrivateRoute path={activity} component={Activities} />
         </Switch>
       </BrowserRouter>
     </div>

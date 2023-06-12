@@ -44,17 +44,20 @@ const Sidebar = () => {
         });
     };
     fetchData();
-  },[]);
+  }, []);
 
   // ABHISEK API consumption  for topics List
 
   const [Topic, setTopic] = useState([]);
+
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
+
     const subjectId = queryParams.get("subjectId");
     const filters = JSON.stringify({
       subject_id: subjectId,
-    }); 
+    });
+
     const fetchData = async () => {
       setLoading(true);
       await axios
@@ -88,19 +91,13 @@ const Sidebar = () => {
     const className = queryParams.get("class");
     history.push(`content/?class=${className}&subjectId=${id}`);
   };
-  const Activities = () => {
-    history.push( "/activity" );
-  };
-  
+
   return (
     <div className="container-sidebar">
       <div className="logo-container">
         <img className="text-logo" src={textLogo} alt="" />
       </div>
       <h6 className="slogan">LEARNING MADE FUN</h6>
-      <div className="Activity">
-       <button className="Activity-Button" onClick={Activities}>ACTIVITY SESSION</button>
-      </div>
 
       <div className="courses-activity"></div>
       <>

@@ -9,9 +9,7 @@ const appRoute = {
   videood: "/videood",
   video: "/video",
   language: "/language",
-  activity: "/activity",
-  tracing: "/tracing",
-  number: "/number",
+  activity: "/activity"
 };
 
 const apiEndPoint = {
@@ -23,10 +21,7 @@ const apiEndPoint = {
   topic: "/courses/topic/",
   topicod: "/anganwadi/odia/topic/",
   subject: "/courses/subject/",
-  subjectod: "/anganwadi/odia/subject/",
-  activity: "/courses/activity/",
-  alphabet: "/courses/aplphabet_activity/",
-  number:"/courses/number_activity/",
+  subjectod: "/anganwadi/odia/subject/"
 };
 
 export { appRoute, apiEndPoint };

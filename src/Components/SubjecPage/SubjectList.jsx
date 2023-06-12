@@ -35,25 +35,28 @@ const SubjectList = () => {
     const className = queryParams.get("class");
     history.push(`content/?class=${className}&subjectId=${id}`);
   };
+
   // Add sound Efefctt  On  Subject Card Click
 
   let audio = new Audio("/cartoon-pop-up-sound.mp3");
   const start = () => {
     audio.play();
     audio.volume = 0.2;
-  };     
+  };
 
   return (
     <div className="container-sub">
-    <Sidebar />
-    {loading ? (
-    <div className="right-side" style={{ width: "100%" }}>
-    <Loader />
-    </div>
-    ): data.length ? (
+      
+      <Sidebar />
+      
+      {loading ? (
+        <div className="right-side" style={{ width: "100%" }}>
+          <Loader />
+        </div>
+      ) : data.length ? (
         <div className="right-side">
           <div className="header">
-            <Header/>
+            <Header />
           </div>
           <div className="all-subject">
             <div className="sub-card">
@@ -62,13 +65,15 @@ const SubjectList = () => {
                   <div
                     onClick={(e) => {
                       e.stopPropagation();
-                      redirectSubjectPage(subject.standard_name, subject.id);}}
-
+                      redirectSubjectPage(subject.standard_name, subject.id);
+                    }}
                     key={subject.id}
                     className="sub-card-section-map"
                   >
                     <img src={subject.subject_image} alt="" onClick={start} />
-                    <div><h2 className="sub-card-section">{subject.subject_name}
+                    <div>
+                      <h2 className="sub-card-section">
+                        {subject.subject_name}
                       </h2>
                     </div>
                   </div>
