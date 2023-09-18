@@ -31,7 +31,6 @@ const Login = () => {
     setSubmitting(false);
     const { password, email } = values;
     setLoading(true);
-    {/*Validating the UserName, Password through post method*/}
     const response = await axios
       .post(apiEndPoint.user, {
         username: email,
@@ -45,7 +44,7 @@ const Login = () => {
       dispatch(login(response.data.data));
       localStorage.setItem("authToken", response.data.token);
       toast.success("Login Successful");
-      history.push("/dashboard");
+      history.push("/language");
     }
     //Abhisek Added Else condion for wrong password
     else {
@@ -64,10 +63,14 @@ const Login = () => {
       </Row>
 
       {/* Logo */}
+
+      {/* <Row className="row justify-content-center">
+    <div className="logo" ><img src={logo} alt="" /> </div>
+
+      </Row> */}
       <Row className="row justify-content-center">
         <Col xs={6} md={7}>
           <div className="landing-video ">
-            {/*Landing Video showing at right side of Login page*/}
             <ReactPlayer
               className="react-player_Home"
               playing="true"
@@ -96,6 +99,8 @@ const Login = () => {
           <div className="form-Container">
             <div className="form-message">
               <h1>Login to Dambaruu</h1>
+
+              {/* <p>Existing Dambaruu user?</p> */}
             </div>
             {/*Used Fromik for login form */}
             <Formik

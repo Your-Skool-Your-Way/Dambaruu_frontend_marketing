@@ -1,9 +1,13 @@
 import logo from "../../Asset/logoheader.png";
+
 import "./header.css";
 import React, { useState } from "react";
+
 import Modal from "react-modal";
+
 import profileIcon from "../../Asset/school1.png";
 import backIcon from "../../Asset/backbtn.png";
+
 import { useHistory } from "react-router";
 import { useEffect } from "react";
 import axios, { config } from "../../utils/api";
@@ -11,7 +15,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "../../utils/reducer";
 import { apiEndPoint } from "../../utils/constants";
 import Tooltip from "@mui/material/Tooltip";
-
 const customStyles = {
   content: {
     top: "45%",
@@ -82,7 +85,7 @@ const Header = () => {
   // Home Button Route
 
   const AgeGroup = () => {
-    history.push( "/dashboard" );
+    history.push( "/language" );
   };
 
   const logoutConfirmation = () => {
@@ -91,7 +94,7 @@ const Header = () => {
   const ConfirmLogoutPopUp = () => {
     return (
       <div className="container-log-confirm">
-        <img src={logo} alt="" />
+        <img  src={logo} alt="" />
         <h1>Are you sure to LOGOUT?</h1>
         <div className="button-confirm-container">
           <button onClick={cancleHandler} className="button-Cancle">
@@ -108,7 +111,9 @@ const Header = () => {
     return (
       <div className="logoutpop">
         <div className="">
+          {/* <h1>Keep learning</h1> */}
           <div className="school_info">
+            {/* <h6> school Code : {user?.school_code} </h6> */}
             <h3>Keep learning</h3>
             <img src={logo} alt="" />
           </div>
@@ -126,6 +131,7 @@ const Header = () => {
     );
   };
 
+  //
 
   //  Log out pop modal open sound
 
@@ -140,7 +146,7 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar" data-testid="headertest">
       <div className="navbar__title ">
         <span className="arrowback" onClick={back}>
           <img
@@ -151,15 +157,18 @@ const Header = () => {
           />
         </span>
         <Tooltip title="Click to AGE GROUPS">
-          <img src={logo} alt="" onClick={AgeGroup} />
+          <img src={logo}  alt="" onClick={AgeGroup} />
         </Tooltip>
       </div>
 
+      {/* <div className='navbar__item'>Login</div>         */}
       <div className="navbar__item">
         <div onClick={openHandler} className="logoutprofile">
           <Tooltip title="Click to Logout">
             <img src={profileIcon} alt="" onClick={start} />
           </Tooltip>
+
+          {/* <h2>{user?.school_code} </h2> */}
         </div>
 
         <Modal isOpen={isOpen} style={customStyles}>

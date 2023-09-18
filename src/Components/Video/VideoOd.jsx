@@ -7,6 +7,7 @@ import axios, { config } from "../../utils/api";
 import { toast, ToastContainer } from "react-toastify";
 import { apiEndPoint } from "../../utils/constants";
 import Header from "../Header/Header";
+import { CleaningServices } from "@mui/icons-material";
 /* For Exit Full Screen when video is playing in full screen */
 function closeFullscreen() {
   if (document.exitFullscreen) {
@@ -31,7 +32,6 @@ const Videoright = ({ video, setSelectedVideo, isSelected, ...props }) => {
         }}
         className="video-right-card"
         {...props}
-        data-testid="player"
       />
     </>
   );
@@ -58,14 +58,13 @@ const Video = () => {
     const fetchData = async () => {
       setLoading(true);
       await axios
-        .get(`${apiEndPoint.content}?filters=${filter}`, config())
+        .get(`${apiEndPoint.contentod}?filters=${filter}`, config())
         .then((res) => {
           if (res.data && res.data.data) {
             setVideo(res.data.data);
             setSelectedVideo(res.data.data[0]);
             setCurrentVideo(0);
             setLoading(false);
-            setIsPlaying(true);
           }
         });
     };
@@ -123,7 +122,6 @@ const Video = () => {
   // console.log("VidEnd", videoEnded);
   // console.log("isPlay", isPlaying);
   // console.log("CrntVid", currentVideoIndex);
-  // console.log("Quiz", quiz);
 
   return (
     <div className=" video_player_Section">
@@ -137,7 +135,7 @@ const Video = () => {
             <Loader />
           </div>
         ) : (
-          <div className="video-right-side" data-testid="data">
+          <div className="video-right-side">
             <div>
               {selectedVideo && selectedVideo.content_file && (
                 <div
@@ -146,10 +144,8 @@ const Video = () => {
                       ? { visibility: "hidden", height: 0 }
                       : { visibility: "visible" }
                   }
-                  data-testid="rcplayer"
                 >
                   <ReactPlayer
-                    data-testid="video-player"
                     className="react-player"
                     id="react-players"
                     ref={playerRef}
@@ -171,6 +167,7 @@ const Video = () => {
                         closeFullscreen();
                         setQuiz(true);
                       }
+                      console.log("sl", selectedVideo);
                     }}
                   />
                 </div>
@@ -221,7 +218,7 @@ const Video = () => {
             </div>
             <ToastContainer className="toaster" />
             {quiz ? null : (
-              <div className="video-right" data-testid="rightbar">
+              <div className="video-right">
                 {video.map((vi, index) => (
                   <Videoright
                     key={vi.id}
@@ -233,7 +230,6 @@ const Video = () => {
                     onClick={() => {
                       setCurrentVideoIndex(index);
                     }}
-                    data-testid="thumbtest"
                   />
                 ))}
               </div>

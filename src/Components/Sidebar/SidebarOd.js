@@ -9,8 +9,8 @@ import { login, selectUser } from "../../utils/reducer";
 import { apiEndPoint } from "../../utils/constants";
 import Button from "@mui/material/Button";
 
-const Sidebar = () => {
-  // Abhisek Api consumption  Subject st
+const SidebarOd = () => {
+  // Abhise Api consumption  Subject st
   const [data, setData] = useState([]);
   //console.log(data);
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ const Sidebar = () => {
     const fetchData = async () => {
       setLoading(true);
       await axios
-        .get(`${apiEndPoint.subject}?filters=${filters}`, config())
+        .get(`${apiEndPoint.subjectod}?filters=${filters}`, config())
         .then((res) => {
           if (res.data && res.data.data) {
             setData(res.data.data);
@@ -50,7 +50,7 @@ const Sidebar = () => {
     const fetchData = async () => {
       setLoading(true);
       await axios
-        .get(`${apiEndPoint.topic}?filters=${filters}`, config())
+        .get(`${apiEndPoint.topicod}?filters=${filters}`, config())
         .then((res) => {
           if (res.data && res.data.data) {
             setTopic(res.data.data);
@@ -60,7 +60,6 @@ const Sidebar = () => {
     };
     fetchData();
   }, []);
-
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -79,7 +78,7 @@ const Sidebar = () => {
   const redirectSubjectPage = (standard_name, id) => {
     const queryParams = new URLSearchParams(window.location.search);
     const className = queryParams.get("class");
-    history.push(`content/?class=${className}&subjectId=${id}`);
+    history.push(`contentod/?class=${className}&subjectId=${id}`);
   };
 
   return (
@@ -96,7 +95,6 @@ const Sidebar = () => {
       <div className="scrl">
         {data.map((subject, index) => {
           return (
-            
             <div className="sidebar_scroll">
               <div className="sidebar_SubList">
                 <Button
@@ -111,7 +109,6 @@ const Sidebar = () => {
                 </Button>
               </div>
             </div>
-            
           );
         })}
         </div>
@@ -120,4 +117,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarOd;

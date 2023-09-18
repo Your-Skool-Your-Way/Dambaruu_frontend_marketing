@@ -1,14 +1,14 @@
 import React from "react";
 import "./Content.css";
-import Sidebar from "../Sidebar/Sidebar";
+import SidebarOd from "../Sidebar/SidebarOd";
 import Loader from "../Loader";
 import { useHistory } from "react-router";
 import { useState, useEffect } from "react";
 import axios, { config } from "../../utils/api";
 import { apiEndPoint } from "../../utils/constants";
-
 import Header from "../Header/Header";
-const Content = () => {
+
+const Contentod = () => {
   const [topic, setTopic] = useState([]);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -21,7 +21,7 @@ const Content = () => {
     const fetchDataTopic = async () => {
       setLoading(true);
       await axios
-        .get(`${apiEndPoint.topic}?filters=${filter}`, config())
+        .get(`${apiEndPoint.topicod}?filters=${filter}`, config())
         .then((res) => {
           if (res.data && res.data.data) {
             setTopic(res.data.data);
@@ -34,7 +34,7 @@ const Content = () => {
 
   // topic card clicable
   const redirectVideoPage = (topicId, id) => {
-    history.push(`/video?topicId=${topicId}`);
+    history.push(`/videood?topicId=${topicId}`);
 
     let audio = new Audio("/cartoon-pop-up-sound.mp3");
     audio.play();
@@ -45,7 +45,7 @@ const Content = () => {
 
   return (
     <div className="container-con">
-      <Sidebar />
+      <SidebarOd />
       {loading ? (
         <div className="right-side" style={{ width: "100%" }}>
           <Loader />
@@ -78,4 +78,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Contentod;

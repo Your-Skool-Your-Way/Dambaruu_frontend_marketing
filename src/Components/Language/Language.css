@@ -1,0 +1,101 @@
+.bg {
+  background-image: url(../../Asset/bg3.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Times New Roman", Times, serif;
+  gap: 180px;
+  padding-top: 200px;
+}
+
+.card-con {
+  text-align: center;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  margin: 25px;
+  box-shadow: 3px 4px 5px black;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 3840px) {
+  .cards {
+    gap: 550px;
+    padding-top: 700px;
+  }
+
+  .card-con {
+    height: 1120px;
+    width: 890px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .cards {
+    padding-top: 100px;
+    gap: 300px;
+  }
+
+  .card-con {
+    height: 400px;
+    width: 310px;
+    display: flex;
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .cards {
+    padding-top: 110px;
+    gap: 300px;
+  }
+
+  .card-con {
+    height: 360px;
+    width: 300px;
+    display: flex;
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .cards {
+    padding-top: 100px;
+    gap: 300px;
+  }
+
+  .card-con {
+    height: 345px;
+    width: 280px;
+    display: flex;
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bg {
+    background-image: url(../../Asset/bg3.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .cards {
+    padding-top: 120px;
+    gap: 150px;
+  }
+
+  .card-con {
+    height: 320px;
+    width: 260px;
+    display: flex;
+    font-size: x-large;
+  }
+}

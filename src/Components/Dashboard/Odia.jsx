@@ -7,15 +7,14 @@ import axios, { config } from "../../utils/api";
 import { apiEndPoint } from "../../utils/constants";
 import Header from "../Header/Header";
 
-const Dash = () => {
+const Odia = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log(data);
   const history = useHistory();
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      await axios.get(apiEndPoint.standard, config()).then((res) => {
+      await axios.get(apiEndPoint.odia, config()).then((res) => {
         if (res.data && res.data.data) {
           setData(res.data.data);
         }
@@ -26,7 +25,7 @@ const Dash = () => {
   }, []);
 
   const redirectSubjectPage = (className) => {
-    history.push(`/subjects?class=${className}`);
+    history.push(`/subjectod?class=${className}`);
   };
 
   // Add Button click sound Effect
@@ -56,7 +55,6 @@ const Dash = () => {
                     key={standard.id}
                     className="class-card"
                   >
-                    {}
                     <img
                       className="standardList"
                       src={standard.image}
@@ -75,4 +73,4 @@ const Dash = () => {
   );
 };
 
-export default Dash;
+export default Odia;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import SidebarOd from "../Sidebar/SidebarOd";
 import "./SubjectList.css";
 import axios, { config } from "../../utils/api";
 import { useHistory } from "react-router-dom";
@@ -7,7 +7,7 @@ import Loader from "../Loader";
 import { apiEndPoint } from "../../utils/constants";
 import Header from "../Header/Header";
 
-const SubjectList = () => {
+const SubjectListOdia = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -20,7 +20,7 @@ const SubjectList = () => {
     const fetchData = async () => {
       setLoading(true);
       await axios
-        .get(`${apiEndPoint.subject}?filters=${filters}`, config())
+        .get(`${apiEndPoint.subjectod}?filters=${filters}`, config())
         .then((res) => {
           if (res.data && res.data.data) {
             setData(res.data.data);
@@ -33,7 +33,7 @@ const SubjectList = () => {
   const redirectSubjectPage = (standard_name, id) => {
     const queryParams = new URLSearchParams(window.location.search);
     const className = queryParams.get("class");
-    history.push(`content/?class=${className}&subjectId=${id}`);
+    history.push(`contentod/?class=${className}&subjectId=${id}`);
   };
 
   // Add sound Efefctt  On  Subject Card Click
@@ -46,7 +46,7 @@ const SubjectList = () => {
 
   return (
     <div className="container-sub">
-      <Sidebar />
+      <SidebarOd />
       {loading ? (
         <div className="right-side" style={{ width: "100%" }}>
           <Loader />
@@ -56,6 +56,7 @@ const SubjectList = () => {
           <div className="header">
             <Header />
           </div>
+
           <div className="all-subject">
             <div className="sub-card">
               {data.map((subject, index) => {
@@ -90,4 +91,4 @@ const SubjectList = () => {
   );
 };
 
-export default SubjectList;
+export default SubjectListOdia;
