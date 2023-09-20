@@ -9,7 +9,23 @@ const appRoute = {
   videood: "/videood",
   video: "/video",
   language: "/language",
-  activity: "/activity"
+  activity: "/activity",
+  dashboard: "/dashboard",
+  odia: "/odia",
+  login: "/",
+  content: "/content",
+  contentod: "/contentod",
+  subjectod: "/subjectod",
+  subject: "/subjects",
+  videood: "/videood",
+  video: "/video",
+  language: "/language",
+  activity: "/activity",
+  tracing: "/tracing",
+  number: "/number",
+  numbergame: "/numbergame",
+ thumbnails: "/thumbnails",
+ tracingalphabet: "/tracingalphabet",
 };
 
 const apiEndPoint = {
@@ -21,7 +37,12 @@ const apiEndPoint = {
   topic: "/courses/topic/",
   topicod: "/anganwadi/odia/topic/",
   subject: "/courses/subject/",
-  subjectod: "/anganwadi/odia/subject/"
+  subjectod: "/anganwadi/odia/subject/",
+  activity: "/courses/activity/",
+  alphabet: "/courses/activity_alphabet/",
+  number:"/courses/activity_number/",
+  thumbnails:"/courses/activity_thumbnails/",
+  tracingalphabet:"/courses/activity_gif/",
 };
 
 export { appRoute, apiEndPoint };
