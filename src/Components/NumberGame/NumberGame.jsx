@@ -43,7 +43,7 @@ const NumberGame = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [volume, setVolume] = useState(0.1);
-  const [isAudioLoaded, setIsAudioLoaded] = useState(true);
+  const [isAudioLoaded, setIsAudioLoaded] = useState(false);
   const handleNumberClick = (numberIndex) => {
 
     const currentQuestion = questions[currentQuestionIndex];
