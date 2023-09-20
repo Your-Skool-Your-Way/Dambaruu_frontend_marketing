@@ -9,8 +9,19 @@ import { login, selectUser } from "../../utils/reducer";
 import { apiEndPoint } from "../../utils/constants";
 import Button from "@mui/material/Button";
 
+const customStyles = {
+  content: {
+    top: "70%",
+    left: "29%",
+    right: "auto",
+    bottom: "auto",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "orange",
+  },
+};
+
 const Sidebar = () => {
-  // Abhisek Api consumption  Subject st
+  // Abhise Api consumption  Subject st
   const [data, setData] = useState([]);
   //console.log(data);
   const [loading, setLoading] = useState(false);
@@ -33,20 +44,17 @@ const Sidebar = () => {
         });
     };
     fetchData();
-  }, []);
+  },[]);
 
   // ABHISEK API consumption  for topics List
 
   const [Topic, setTopic] = useState([]);
-
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-
     const subjectId = queryParams.get("subjectId");
     const filters = JSON.stringify({
       subject_id: subjectId,
-    });
-
+    }); 
     const fetchData = async () => {
       setLoading(true);
       await axios
@@ -75,28 +83,30 @@ const Sidebar = () => {
       fetchData();
     }
   }, [user, dispatch]);
-
   const redirectSubjectPage = (standard_name, id) => {
     const queryParams = new URLSearchParams(window.location.search);
     const className = queryParams.get("class");
     history.push(`content/?class=${className}&subjectId=${id}`);
   };
-
+  const Activities = () => {
+    history.push( "/activity" );
+  };
+  
   return (
     <div className="container-sidebar">
       <div className="logo-container">
-        {/* <img className="logo" src={logo} alt="logo" /> */}
         <img className="text-logo" src={textLogo} alt="" />
       </div>
       <h6 className="slogan">LEARNING MADE FUN</h6>
+      <div className="Activity">
+       <button className="Activity-Button" onClick={Activities}>ACTIVITY</button>
+      </div>
 
       <div className="courses-activity"></div>
-
       <>
       <div className="scrl">
         {data.map((subject, index) => {
           return (
-            
             <div className="sidebar_scroll">
               <div className="sidebar_SubList">
                 <Button
@@ -111,10 +121,9 @@ const Sidebar = () => {
                 </Button>
               </div>
             </div>
-            
           );
         })}
-        </div>
+      </div>
       </>
     </div>
   );

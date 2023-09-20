@@ -1,9 +1,228 @@
 .activity-section{
-    /* background-color: antiquewhite; */
     background-image: url(../../Asset/bg3.jpg);
     text-align: center;
     height: 100vh;
     width: 100%;
     top: 0;
-    position: fixed;
+    position: fixed; 
+    overflow:scroll;   
+    overflow-x: hidden; 
 }
+.activity-block{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    align-content: center;
+    margin-left: -15rem;
+}
+
+.activity_img {
+    width: auto !important;
+    height: auto !important;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    /* border-radius: 36px; */
+    cursor: url(/public/pointer.png), auto;
+    /* box-shadow: 3px 4px 5px black; */
+  }
+  .activity-container{
+    background-image: url(../../Asset/bg3.jpg);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    overflow:scroll; 
+}
+.activity-main-card{ 
+    align-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;  
+    margin-top: 1rem;
+    margin-left: 15rem;
+}
+/* .activity-cards{
+    height: 20rem ;
+    width: 13rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    transform-style: preserve-3d;
+    transition: transform 1000ms; 
+} */
+
+
+/* .alphabet-card{
+    height:20.1rem ;
+    width: 13.4rem;
+    background-image: url(../../Asset/cards/alphabets/1-53.png);
+    margin-left: 20rem;
+    margin-top: 7rem;
+    text-align: center;
+    border-radius: 2rem;
+    position: relative;
+}
+.number-card{
+    height:20.1rem ;
+    width: 13.4rem;
+    background-image: url(../../Asset/cards/numbers/1-21.png);
+    margin-left: 5rem;
+    margin-top: 7rem;
+    text-align: center;
+    border-radius: 2rem;
+    position: relative;
+}
+.thumb-card{
+    height:20.1rem ;
+    width: 13.4rem;
+    background-image: url(../../Asset/cards/thumbnails/1-22.png);
+    margin-left: 5rem;
+    margin-top: 7rem;
+    text-align: center;
+    border-radius: 2rem;
+    position: relative;
+} */
+
+
+
+@media(max-width: 1024px) and (max-height: 768px)   {
+    .activity-section{
+        background-image: url(../../Asset/bg3.jpg);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        position: fixed; 
+        overflow:scroll;   
+        overflow-x: hidden; 
+    }
+    .activity_img {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 5rem;
+        margin-top: 2rem;
+        /* border-radius: 36px; */
+        cursor: url(/public/pointer.png), auto;
+        /* box-shadow: 3px 4px 5px black; */
+      }
+    .activity-main-card{ 
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;  
+        margin-top: 0rem;
+        margin-left: 17rem;
+    }
+}
+@media (min-width:1025px) and (max-width:1280px) and (max-height:720px) {
+    .activity-section{
+        background-image: url(../../Asset/bg3.jpg);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        position: fixed; 
+        overflow:scroll;   
+        overflow-x: hidden; 
+    }
+    .activity_img {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 5rem;
+        margin-top: 2rem;
+        /* border-radius: 36px; */
+        cursor: url(/public/pointer.png), auto;
+        /* box-shadow: 3px 4px 5px black; */
+      }
+    .activity-main-card{ 
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;  
+        margin-top: 0rem;
+        margin-left: 15.5rem;
+    }
+}
+@media(min-width:1366px) and (min-height:768px) {
+    .activity-section{
+        background-image: url(../../Asset/bg3.jpg);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        position: fixed; 
+        overflow:scroll;   
+        overflow-x: hidden; 
+    }
+    .activity-main-card{ 
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;  
+        margin-top: 0rem;
+        margin-left: 15rem;
+    }
+    .activity_img {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 3rem;
+        margin-top: 2rem;
+        cursor: url(/public/pointer.png), auto;
+      }
+}
+@media(min-width:1367px) and (max-width:1920px) and (max-height:1080px) {
+    .activity-section{
+        background-image: url(../../Asset/bg3.jpg);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        position: fixed; 
+        overflow:scroll;   
+        overflow-x: hidden; 
+    }
+    .activity-main-card{ 
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;  
+        margin-top: 0rem;
+        margin-left: 14.5rem;
+    }
+    
+    .activity_img {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 5rem;
+        margin-top: 3rem;
+        cursor: url(/public/pointer.png), auto;
+      }
+}
+
+/* @media(min-width:3840px) and (min-height:2160px){
+    .activity-section{
+        background-image: url(../../Asset/bg3.jpg);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        position: fixed; 
+        overflow:scroll;   
+        overflow-x: hidden; 
+    }
+    .activity-main-card{ 
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;  
+        margin-top: 0rem;
+        margin-left: 14.5rem;
+    }
+    .activity_img {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 6rem;
+        margin-top: 3rem;
+        cursor: url(/public/pointer.png), auto;
+      }
+} */

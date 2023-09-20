@@ -15,7 +15,7 @@ const Tracing = () => {
 
   const handleClick = async (id, soundUrl) => {
     const obj = data.find((alphabet) => alphabet.id === id);
-    setIsFlipped(isFlipped === obj.alphabet_image_front ? obj.alphabet_image_back : obj.alphabet_image_front);
+    setIsFlipped(isFlipped === obj.image_front ? obj.image_back : obj.image_front);
     if (currentSound) {
       currentSound.pause();
     }
@@ -41,7 +41,7 @@ const Tracing = () => {
       }
     }; 
   },
-[ ]);
+[]);
 
 
   return (
@@ -62,10 +62,10 @@ const Tracing = () => {
                 return (
                   <div className="tracing-card-front" key={alphabet.id}>
                     <img
-                      src={isFlipped === alphabet.alphabet_image_front ? alphabet.alphabet_image_back : alphabet.alphabet_image_front}
+                      src={isFlipped === alphabet.image_front ? alphabet.image_back : alphabet.image_front}
                       alt="Alphabet"
                       onClick={() => {
-                        handleClick(alphabet.id, alphabet.alphabet_sound);
+                        handleClick(alphabet.id, alphabet.sound);
                       }}
                     />
                   </div>
