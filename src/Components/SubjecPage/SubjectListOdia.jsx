@@ -72,9 +72,9 @@ const SubjectListOdia = () => {
                   >
                     <img src={subject.subject_image} alt="" onClick={start} />
                     <div>
-                      <h2 className="sub-card-section">
+                      {/* <h2 className="sub-card-section">
                         {subject.subject_name}
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 );

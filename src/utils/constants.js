@@ -26,6 +26,8 @@ const appRoute = {
   numbergame: "/numbergame",
  thumbnails: "/thumbnails",
  tracingalphabet: "/tracingalphabet",
+ missingnumbers: "/missingnumbers",
+ matchingletters: "/matchingletters",
 };
 
 const apiEndPoint = {

@@ -66,7 +66,7 @@ const Contentod = () => {
                   }}
                   className="topicsCard"
                 >
-                  <h3 className="topicName">{topic.topic_name}</h3>
+                  {/* <h3 className="topicName">{topic.topic_name}</h3> */}
                   <img className="topiclist" src={topic.topic_image} alt="" />
                 </div>
               );

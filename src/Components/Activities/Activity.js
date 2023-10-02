@@ -15,11 +15,12 @@ const Activity = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-  
     const fetchData = async () => {
+      console.log("fetchData",fetchData)
     setLoading(true);
     await axios.get(`${apiEndPoint.activity}`, config())
     .then((res) => {
+      console.log(res);
     if (res.data && res.data.data) {
     setData(res.data.data);}
     setLoading(false);
@@ -34,6 +35,7 @@ const Activity = () => {
 return (
   <div className="activity-section">
   <Header/>
+  
   <div className="activity-block">
     {loading ?(
     <div className="loading"><Loader/>

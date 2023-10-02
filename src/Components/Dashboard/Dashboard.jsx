@@ -63,7 +63,7 @@ const Dash = () => {
                       alt=""
                       onClick={start}
                     />
-                    <h4>{standard.standard_name}</h4>
+                    {/* <h4>{standard.standard_name}</h4> */}
                   </div>
                 );
               })}

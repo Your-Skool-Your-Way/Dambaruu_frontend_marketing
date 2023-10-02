@@ -18,11 +18,14 @@ import Tracing from "./Components/Tracing/Tracing";
 import Number from "./Components/Number/Number";
 import NumberGame from "./Components/NumberGame/NumberGame";
 import Thumbnails from "./Components/Thumbnails/Thumbnails";
+import MissingNumbers from "./Components/MissingNumbers/MissingNumbers";
+import MatchingLetters from "./Components/MatchingLetters/MatchingLetters";
 import Odia from './Components/Dashboard/Odia';
 import { appRoute } from "./utils/constants";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SubjectListOdia from "./Components/SubjecPage/SubjectListOdia";
-const { login, language, odia, dashboard, subjectod, subject, contentod, content, videood, video, activity,tracing,thumbnails,tracingalphabet,number,numbergame } = appRoute;
+const { login, language, odia, dashboard, subjectod, subject, contentod, content, videood, video, activity
+  ,tracing,thumbnails,tracingalphabet,number,numbergame,missingnumbers,matchingletters } = appRoute;
 console.log( appRoute );
 const App = () => {
   // Disable KeyBoard Shortcut Key for Application
@@ -77,6 +80,8 @@ const App = () => {
           <PrivateRoute path={video} component={Video} />
           <Route path={tracing} component={Tracing} />
           <Route path={thumbnails} component={Thumbnails} />  
+          <Route path={missingnumbers} component={MissingNumbers} /> 
+          <Route path={matchingletters} component={MatchingLetters} /> 
          <Route path={tracingalphabet} component={Tracingalphabet} /> 
           <PrivateRoute path={activity} component={Activities} />
         </Switch>
