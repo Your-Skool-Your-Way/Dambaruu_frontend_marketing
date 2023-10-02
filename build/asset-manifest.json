@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c33a400.css",
+    "main.js": "/static/js/main.b41ce479.js",
+    "static/js/787.30b0bdb4.chunk.js": "/static/js/787.30b0bdb4.chunk.js",
+    "static/media/landing-video.mp4": "/static/media/landing-video.9d893efc675c63606ba1.mp4",
+    "static/media/congratulation_gif.gif": "/static/media/congratulation_gif.0a229de0cf7ba9585437.gif",
+    "static/media/sorry.gif": "/static/media/sorry.18f84fdc0c4e0569a932.gif",
+    "static/media/gif_09-26-23.gif": "/static/media/gif_09-26-23.e1d3983861667336f92a.gif",
+    "static/media/bg2.jpg": "/static/media/bg2.ccabe4c76ccf4f08a89d.jpg",
+    "static/media/bg3.jpg": "/static/media/bg3.88371a6c38a48163c0f5.jpg",
+    "static/media/odis_card.png": "/static/media/odis_card.61b08a150cd45a7d210a.png",
+    "static/media/sky.png": "/static/media/sky.7780c9fcffaa10db5d18.png",
+    "static/media/Eng_card.png": "/static/media/Eng_card.1f247c63bd61ede432ac.png",
+    "static/media/logo1 .png": "/static/media/logo1 .db4cf7d1f50ea00e81e8.png",
+    "static/media/welldone1-removebg-preview.png": "/static/media/welldone1-removebg-preview.afaab026752471c13220.png",
+    "static/media/dambaruu.png": "/static/media/dambaruu.060f12240c613410e6f2.png",
+    "static/media/download_1-removebg-preview.png": "/static/media/download_1-removebg-preview.7320e8388314013ae009.png",
+    "index.html": "/index.html",
+    "main.0c33a400.css.map": "/static/css/main.0c33a400.css.map",
+    "main.b41ce479.js.map": "/static/js/main.b41ce479.js.map",
+    "787.30b0bdb4.chunk.js.map": "/static/js/787.30b0bdb4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c33a400.css",
+    "static/js/main.b41ce479.js"
+  ]
+}

@@ -1,0 +1,119 @@
+.tracing-container{
+    background-image: url(../../Asset/bg3.jpg);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    overflow:scroll; 
+}
+.tracing-block-card{ 
+    align-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;    
+}
+ .tracing-card{ 
+ position: relative;
+ transform-style: preserve-3d;
+ cursor:pointer;
+ transition: transform 0.5s;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+.tracing-card-front{
+    height: 20rem ;
+    width: 13rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    transform-style: preserve-3d;
+    transition: transform 1000ms;
+   
+}
+.tracing-card-back{
+    height: 20rem ;
+    width: 13rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    position:absolute;
+    backface-visibility:hidden;
+    transform: rotateY(180deg);
+    border-radius: 2rem;
+
+} 
+
+ 
+
+
+
+/* .flip-exit{
+    transform: rotateY('0deg');
+
+}
+
+.flip-exit-active{
+    transform: rotateY('180deg');
+    transition: transform 300ms;
+}
+
+.flip-exit-done{
+    transform: rotateY('180deg');
+
+}
+
+.flip-enter{
+    transform: rotateY('180deg');
+
+}
+
+.flip-enter-active{
+    transform: rotateY('0deg');
+    transition: transform 300ms;
+    transition-timing-function:cubic-bezier()
+}
+
+.flip-enter-done{
+    transform: rotateY('0deg');
+
+} */
+
+
+.tracing-block-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+   
+}
+  .tracing-card-front
+   {
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+  }
+.tracing-card-back{
+    position:absolute;
+    backface-visibility:hidden;
+    transform: rotateY(180deg);
+}
+
+
+
+  /*.tracing-card .tracing-card-back{
+    position: relative;
+    width: 13rem;
+    height: 20px;
+    margin-left: 2rem;
+    margin-top: 10rem;
+    backface-visibility: hidden;
+  }
+  
+  .tracing-card .tracing-card-back {
+    transform: rotateY(180deg);
+    margin-top: 10rem;
+  } */

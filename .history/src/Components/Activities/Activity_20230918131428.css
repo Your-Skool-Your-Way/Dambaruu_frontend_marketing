@@ -1,0 +1,9 @@
+.activity-section{
+    /* background-color: antiquewhite; */
+    background-image: url(../../Asset/bg3.jpg);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+}

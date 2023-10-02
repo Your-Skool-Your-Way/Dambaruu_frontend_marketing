@@ -1,0 +1,133 @@
+/* .flip-exit{
+    transform: rotateY('0deg');
+
+}
+
+.flip-exit-active{
+    transform: rotateY('180deg');
+    transition: transform 300ms;
+}
+
+.flip-exit-done{
+    transform: rotateY('180deg');
+
+}
+
+.flip-enter{
+    transform: rotateY('180deg');
+
+}
+
+.flip-enter-active{
+    transform: rotateY('0deg');
+    transition: transform 300ms;
+    transition-timing-function:cubic-bezier()
+}
+
+.flip-enter-done{
+    transform: rotateY('0deg');
+
+} */
+/* .tracing-container{
+    background-image: url(../../Asset/bg3.jpg);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    overflow:scroll; 
+}
+.tracing-block-card{ 
+    align-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    margin-left: 0.5rem;
+    margin-top: -1rem;    
+} */
+
+.tracing-card{ 
+    position: relative;
+    transform-style: preserve-3d;
+    cursor:pointer;
+    transition: transform 0.5s;
+   }
+   .card.flipped {
+       transform: rotateY(180deg);
+   }
+  .tracing-card-front{
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+  }
+.tracing-card-back{
+    position:absolute;
+    backface-visibility:hidden;
+    transform: rotateY(180deg);
+}
+
+  @media(max-width: 1024px) and (max-height: 768px)   {
+    .tracing-card-front{
+        position: relative;
+        width: 13rem;
+        height: 13rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+      }
+    .tracing-card-back{
+        position:absolute;
+        backface-visibility:hidden;
+        transform: rotateY(180deg);
+    }
+  }
+  @media (min-width:1025px) and (max-width:1280px) and (max-height:720px) {
+    .tracing-card-front{
+        position: relative;
+        width: 13rem;
+        height: 13rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+      }
+    .tracing-card-back{
+        position:absolute;
+        backface-visibility:hidden;
+        transform: rotateY(180deg);
+    }
+  }
+  @media (min-width:1366px) and (min-height:768px) {
+    .tracing-card-front{
+        position: relative;
+        width: 13rem;
+        height: 13rem;
+        margin-left: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+      }
+    .tracing-card-back{
+        position:absolute;
+        backface-visibility:hidden;
+        transform: rotateY(180deg);
+    }
+  }
+  @media (min-width:1367px) and (max-width:1920px) and (max-height:1080px) {
+    .tracing-card-front{
+      position: relative;
+      width: 13rem;
+      height: 13rem;
+      margin-left: 5rem;
+      margin-top: 2rem;
+      margin-bottom: 7rem;
+    }
+  .tracing-card-back{
+      position:absolute;
+      backface-visibility:hidden;
+      transform: rotateY(180deg);
+  }
+  }
